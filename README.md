@@ -1,4 +1,4 @@
-## Game Theoretic Planning
+## Game Theoretic Forecasting and Planning
 
 This is an official implementation for the IROS 2023 paper:\
 **A Game Theoretic Framework for Joint Forecasting and Planning**
