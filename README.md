@@ -42,7 +42,7 @@ python evaluate.py
 ### Results
 <table border="0">
  <tr align="center">
-    <td><img src="docs/SAFE.gif" width="680" alt>
+    <td><img src="docs/SAFE.gif" alt>
     <em>Safe Planning with Adversarial Forecasts</em></td>
     <td><img src="docs/MLE.gif" alt>
     <em>Collision with MLE Forecasting and Planning</em></td>
