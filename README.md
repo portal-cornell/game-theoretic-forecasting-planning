@@ -15,7 +15,7 @@ We implement a game-theoretic framework for joint forecasting and planning on th
 
 ### Setup
 
-Setup environments follwoing the [SETUP.md](docs/SETUP.md)
+Setup environments following the [SETUP.md](docs/SETUP.md)
 
 ### Training
 
@@ -26,14 +26,14 @@ python train_mle_forecaster.py
 python train_nom_planner.py
 ```
 
-Finetune above models using the game-theoretic framework
+Finetune the above models using the game-theoretic framework.
 ```
 python train_forecaster_planner_game.py
 ```
 
 
 ### Evaluation
-The following code compares costs and collision rates of our approach with MLE
+The following code compares the costs and collision rates of our approach with MLE.
 ```
 cd crowd_nav
 python evaluate.py
