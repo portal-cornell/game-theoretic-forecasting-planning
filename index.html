@@ -1,0 +1,182 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./resources/style.css" media="screen"/>
+
+<html lang="en">
+<head>
+  	<title>Game Theoretic Forecasting and Planning</title>
+      <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/
+          if you update and want to force Facebook to re-scrape. -->
+  	<meta property="og:image" content="./resources/framework.png"/>
+  	<meta property="og:title" content="Game-Theoretic Forecasting and Planning" />
+  	<meta property="og:description" content="A Game-Theoretic Framework for Joint Forecasting and Planning" />
+    <!-- Twitter automatically scrapes this. Go to https://cards-dev.twitter.com/validator?
+        if you update and want to force Twitter to re-scrape. -->
+    <meta property="twitter:card"          content="summary" />
+    <meta property="twitter:title"         content="Game-Theoretic Forecasting and Planning" />
+    <meta property="twitter:description"   content="A Game-Theoretic Framework for Joint Forecasting and Planning" />
+    <meta property="twitter:image"         content="./framework.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container"> 
+    <div>
+        <a href="https://portal.cs.cornell.edu/"><img id="logo" src="./resources/portal_light.png"
+         alt="Portal Group Logo"/></a>
+        
+    </div>
+
+    <div class="title" style="font-size:40px;">
+        A Game-Theoretic Framework for <br>Joint Forecasting and Planning
+    </div>
+
+    <div class="venue">
+        IROS 2023
+    </div>
+
+    <br><br>
+
+    <div class="author">
+        <a href="https://kushal2000.github.io/">Kushal Kedia</a><sup>*</sup>
+    </div>
+    <div class="author">
+        Prithwish Dan<sup>*</sup>
+    </div>
+    <div class="author">
+        <a href="https://www.sanjibanchoudhury.com/">Sanjiban Choudhury</a><sup>*</sup>
+    </div>
+
+
+    <br><br>
+
+    <div class="affiliation"><sup>*&nbsp;</sup>Cornell University</div>
+    <!-- <div class="affiliation"><sup>2&nbsp;</sup>Affiliation Number Two</div>
+    <div class="affiliation"><sup>3&nbsp;</sup>Affiliation Number Three</div>
+    <div class="affiliation"><sup>4&nbsp;</sup>Affiliation Number Four</div> -->
+
+    <br><br>
+
+    <div class="links"><a href="http://arxiv.org/abs/2308.06137">[Paper]</a></div>
+    <!-- <div class="links">[Paper]</div> -->
+    <div class="links"><a href="https://github.com/portal-cornell/game-theoretic-forecasting-planning">[Code]</a></div>
+
+    <br><br>
+
+    <img style="width: 100%;" src="./resources/framework.png" alt="Method Overview."/>
+    <br><br>
+    
+        <p style="max-width: 950px;width:90%;text-align: justify;text-justify: inter-word;">
+            Overview of our <b>game-theoretic framework</b> for joint forecasting and planning. 
+            The forecaster maximizes the <b>performance difference</b> between the generated plans and the observed plans. 
+            This results in <b>counterfactual forecasts</b> for the cyclist veering into the vehicle's lane that encourages 
+            the planner to <b>guard</b> by nudging away from the cyclist.
+        </p>
+        
+    <br>
+    <hr>
+
+    <h1>Abstract</h1>
+    <p style="width: 80%;text-align: justify;">
+        Planning safe robot motions in the presence of humans
+         requires reliable forecasts of future human motion. 
+         However, simply predicting the most likely motion 
+         from prior interactions does not guarantee safety. 
+         Such forecasts fail to model the long tail of possible 
+         events, which are rarely observed in limited datasets. 
+         On the other hand, planning for worst-case motions leads 
+         to overtly conservative behavior and a <q>frozen robot</q>. 
+         Instead, we aim to learn forecasts that predict counterfactuals 
+         that humans guard against. We propose a novel game-theoretic 
+         framework for joint planning and forecasting with 
+         the payoff being the performance of the planner against 
+         the demonstrator, and present practical algorithms to 
+         train models in an end-to-end fashion. We demonstrate 
+         that our proposed algorithm results in safer plans in a 
+         crowd navigation simulator and real-world datasets of 
+         pedestrian motion. 
+    </p>
+
+    <br><br>
+    <hr>
+
+    <h1>Video</h1>
+    <!-- <div class="video-container">
+        <iframe src="./resources/Final_IROS.mp4" frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+    </div> -->
+
+    <video width="800px";
+    frameBorder="0"; 
+    controls="controls";
+    style="border:2px solid black";>
+        <source src="./resources/video.mp4" type="video/mp4"></source>
+    </video>
+
+    <br><br><br><br>
+    <hr>
+
+
+    <h1>Crowd Navigation Simulation</h1>
+    <p style="width: 80%;text-align: justify;">
+        Compared with MLE-Forecasting, our game-theoretic framework 
+        leads to safer planning on simulation of human-robot crowd 
+        navigation. Adversarial Forecasts generated by the 
+        framework pose more severe hazards when 
+        compared with MLE Forecasts. Guarding against these 
+        forecasts allows our framework to generate plans that are robust to unexpected events.
+    </p>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <figure> 
+                <img src="./resources/gifs/MLE.gif" alt="MLE">
+                <figcaption>MLE Forecasting</figcaption>
+            </figure>
+        </div>
+        <div class="grid-item">
+            <figure> 
+                <img src="./resources/gifs/SAFE.gif" alt="SAFE">
+                <figcaption>Game-Theoretic Framework (ours)</figcaption>
+            </figure>
+        </div>
+    </div>
+    <hr>
+
+    <h1>Paper</h1>
+    <div class="paper-thumbnail">
+        <a href="https://arxiv.org/pdf/2308.06137.pdf">
+            <img class="layered-paper-big" width="100%" src="./resources/preview.png" alt="Paper thumbnail"/>
+        </a>
+    </div>
+    <div class="paper-info">
+        <a href="https://arxiv.org/pdf/2308.06137.pdf"><h3>A Game-Theoretic Framework for <br>Joint Forecasting and Planning</h3></a>
+        <p>Kushal Kedia, Prithwish Dan, Sanjiban Choudhury</p>
+        <!-- <p>Under review (2023)</p> -->
+        <pre><code>@inproceedings{kedia2023game,
+title={A Game-Theoretic Framework for Joint Forecasting and Planning},
+author={Kedia, Kushal and Dan, Prithwish and Choudhury, Sanjiban},
+booktitle={IROS},
+year={2023}
+}        </code></pre> 
+    </div>
+
+    <br><br>
+    <hr>
+
+    <!-- <h1>Acknowledgements</h1>
+    <p style="width: 80%;">We sincerely thank <a href="https://github.com/nicolethean">Nicole Thean (@nicolethean)</a> for creating our art assets for <span class="ms">Robotouille</span>!</p>
+    <p style="width: 80%;">
+        This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful project</a>, and inherits the modifications made by <a href="https://github.com/jasonyzhang/webpage-template">Jason Zhang</a>.
+        The code can be found <a href="https://github.com/elliottwu/webpage-template">here</a>.
+    </p> -->
+
+    <br><br>
+</div>
+
+</body>
+
+</html>
