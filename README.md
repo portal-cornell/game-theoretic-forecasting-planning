@@ -1,5 +1,7 @@
 ## Game Theoretic Forecasting and Planning
 
+**[`Website`](https://portal-cornell.github.io/game-theoretic-forecasting-planning/) | [`Paper`](https://arxiv.org/abs/2308.06137)**
+
 This is an official implementation for the IROS 2023 paper:\
 **A Game Theoretic Framework for Joint Forecasting and Planning**
 <br>
