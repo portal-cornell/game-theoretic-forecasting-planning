@@ -1,6 +1,4 @@
 from crowd_nav.utils.dataset import ForecastDataset, split_dataset
-from crowd_nav.snce.model import ProjHead, SpatialEncoder, EventEncoder
-from crowd_nav.policy.forecast import ForecastNetwork
 from crowd_nav.policy.forecast_attn import ForecastNetworkAttention
 from crowd_nav.policy.planner import Planner
 from utils.training import *
